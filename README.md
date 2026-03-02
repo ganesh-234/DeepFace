@@ -34,12 +34,19 @@ Example Output
 ________________________________________
 
 Engineering Highlights
+
 •	Recursive dataset handling (supports nested folders)
+
 •	Graceful failure handling (enforce_detection=False)
+
 •	Demonstrates understanding of:
+
 o	CNN-based embeddings
+
 o	Deep metric learning
+
 o	Vector similarity search
+
 o	O(n²) scaling in pairwise comparisons
 ________________________________________
 
