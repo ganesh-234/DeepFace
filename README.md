@@ -1,70 +1,51 @@
-Face Recognition Pipeline (DeepFace + OpenCV):
+Face Recognition Pipeline (DeepFace + OpenCV)
 
-End-to-end facial verification pipeline using deep metric learning and computer vision.
+An end-to-end facial verification pipeline built using deep metric learning and computer vision.
+This project detects faces, generates 128-dimensional embeddings using FaceNet, and verifies identity using cosine similarity.
+________________________________________
 
-This project detects faces, generates 128D embeddings using FaceNet, and verifies identity using cosine similarity.
+Overview
 
+This system:
+•	Recursively scans structured image datasets
+•	Detects faces using OpenCV (Haar Cascade)
+•	Generates embeddings using DeepFace with FaceNet
+•	Computes cosine distance for identity verification
+•	Supports both reference-based and full pairwise comparison modes
+________________________________________
 
-
-
-What It Does
-
-Recursively scans image datasets
-Detects faces using OpenCV (Haar Cascade)
-Generates embeddings via DeepFace with FaceNet
-Computes cosine distance for identity verification
-Supports reference-based and full pairwise comparisons
-
-
-
-
-How It Works:
-Detect face
-Convert face → 128D embedding
-Compute cosine similarity
-Classify as MATCH / NO MATCH
-Lower distance → same identity
-Higher distance → different identities
-
-
+How It Works
+1.	Detect face in image
+2.	Convert detected face → 128D embedding
+3.	Compute cosine similarity between embeddings
+4.	Classify result as MATCH or NO MATCH
+•	Lower cosine distance → Same identity
+•	Higher cosine distance → Different identities
+________________________________________
 
 Example Output
 [MATCH] img1.jpg <-> img2.jpg | Dist: 0.1788
 [NO MATCH] img1.jpg vs img3.jpg | Dist: 0.9100
+________________________________________
 
-
-
-
-Engineering Focus
-Handles nested datasets using recursive scanning
-Graceful failure handling (enforce_detection=False)
-
-
-
-Demonstrates understanding of:
-CNN embeddings
-Deep metric learning
-O(n²) scaling in pairwise comparisons
-
-
-
+Engineering Highlights
+•	Recursive dataset handling (supports nested folders)
+•	Graceful failure handling (enforce_detection=False)
+•	Demonstrates understanding of:
+o	CNN-based embeddings
+o	Deep metric learning
+o	Vector similarity search
+o	O(n²) scaling in pairwise comparisons
+________________________________________
 
 Tech Stack
-Python
-OpenCV
-DeepFace
-NumPy
+•	Python
+•	OpenCV
+•	DeepFace
+•	NumPy
 TesorFlow
-
-
-
+________________________________________
 
 
 Why This Project
-This project demonstrates:
-Applied computer vision
-Embedding-based similarity search
-
-Real-world ML pipeline design
-
-System scalability awareness
+This project demonstrates applied computer vision, embedding-based similarity systems, and real-world ML pipeline design with scalability awareness.
