@@ -1,6 +1,7 @@
 Face Recognition Pipeline (DeepFace + OpenCV)
 
 An end-to-end facial verification pipeline built using deep metric learning and computer vision.
+
 This project detects faces, generates 128-dimensional embeddings using FaceNet, and verifies identity using cosine similarity.
 ________________________________________
 
@@ -8,9 +9,13 @@ Overview
 
 This system:
 •	Recursively scans structured image datasets
+
 •	Detects faces using OpenCV (Haar Cascade)
+
 •	Generates embeddings using DeepFace with FaceNet
+
 •	Computes cosine distance for identity verification
+
 •	Supports both reference-based and full pairwise comparison modes
 ________________________________________
 
